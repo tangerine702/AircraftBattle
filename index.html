@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/main.css"/>
+    <title>Document</title>
+</head>
+<body>
+    <!--    游戏设置画面   -->
+<div class="layout layout2">
+    <center>
+        <h2>游戏设置</h2>
+        <h3>点击下方选项设置按键</h3><br>
+        <h3 class="keySet">　　向上　　　　按键：<span id="UPKeySet"></span></h3>
+        <h3 class="keySet">　　向下　　　　按键：<span id="DNKeySet"></span></h3>
+        <h3 class="keySet">　　向左　　　　按键：<span id="LTKeySet"></span></h3>
+        <h3 class="keySet">　　向右　　　　按键：<span id="RTKeySet"></span></h3>
+        <h3 class="keySet">　　低速　　　　按键：<span id="LSKeySet"></span></h3>
+        <h3 class="keySet">　　还原默认按键</h3>
+        <h3>难易度调节</h3>
+        <span class="selectDiff" title="浅尝辄止的难度">简单</span><span class="selectDiff" title="代表大多数玩家的水平">正常</span><span class="selectDiff" title="难度越大，回报越高">疯狂</span>
+        <input type="hidden" id="difficult" value="正常">
+
+    </center>
+
+    <h1 class="returnMain btn-style">返回</h1>
+</div>
+
+<!--    游戏说明     class有个layout3的css用来隐藏说明的布局   -->
+<div class="layout ">
+    <center><h2>游戏说明</h2></center>
+    <p class="howToPlay">
+    1、默认<strong>Enter回车</strong>键开始，<strong>上下左右</strong>移动，<strong>shift</strong>低速移动，同时显示擦弹范围和判定点（见3、），您在下一个版本可以在“游戏设置”中修改游戏操作按键；<br />
+    2、默认已开启<strong>自动开火</strong>模式；<br />
+    3、擦弹范围是一个围绕着机体的<span class="gray">灰色的圈</span>，当圈内有子弹时分数会加得很快，判定点只有机体中间一个小<span class="wdot">白点</span>的范围，击中一次<span class="orange">生命值-10</span>（注意：碰到飞行物不会触发碰撞）；<br />
+    4、今后还会推出更丰富的游戏系统，敬请期待；<br />
+    5、如有任何问题，99%都可以刷新网页解决；<br>   
+    6、玩的开心
+    </p>
+    <img id="control" src="img/operate.png" />
+    <h1 class="returnMain btn-style">返回</h1>
+</div>
+
+<!--                    游戏主面板                   -->
+<section id="gameScreen">
+    <!-- 自机 -->
+    <div id="p_ship" class="player1">
+        <div id="laser"></div>
+        <div id="p_spot"></div>
+    </div>
+
+</section>
+
+
+<!--            数据面板            -->
+<aside>
+    <button id="startBtn" >开始游戏</button><br>
+
+    <button id="endTest"  onclick="endGame()">结束游戏</button><br><br>
+
+    <p>生命值:<span id="hitCount">50</span></p><br>
+    <p>擦弹:<span id="zijiPos">0</span></p><br>
+    <p>分数:<span id="score">0</span></p><br><br>
+    <p>屏幕弹幕数 <span id="dmkcount">0</span></p>
+    <h4>HTML5弹幕射击游戏 ver1.8 作者：Kagashino</h4>
+    <p>图片素材均来自恶魔之星</p><br>
+    <p>历史版本 <br>
+        <!--逻辑初成-->
+        ver1.6.12.28 <br>
+        <!--优化代码结构-->
+        ver1.7.1.18 <br>
+        <!--优化界面布局，增加自定义按键，优化代码结构-->
+        ver1.7.2.28 <br>
+        <!--重做了弹幕生成算法-->
+        <!--新增自机狙、五角星和螺旋弹的算法-->
+        <!--1.8更新：把弹幕添加到了Boss中，整个游戏流程基本成型-->
+    </p><br><br>
+
+</aside>
+<script src="JS/jquery.min.js"></script>
+<script src="JS/keymap.js"></script><!-- 键盘对应名称 -->
+<script src="JS/animateEasing.js"></script><!-- JQ动画速度曲线扩展 -->
+<script src="JS/bulletClass.js"></script><!-- 子弹行为 -->
+<script src="JS/newscript.js"></script><!-- 主逻辑 -->
+<script src="JS/objAction.js"></script><!-- 物体移动逻辑 -->
+<script src="JS/eventListener.js"></script><!-- 事件监听器 -->
+
+</body>
+</html>

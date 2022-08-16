@@ -1,0 +1,227 @@
+body{
+    margin: 0;
+    padding: 0;
+    z-index: -1000;
+}
+section,p,aside{
+    margin: 0;padding: 0;
+    display: inline-block;
+    vertical-align: top;
+}
+aside{
+    width: 30%;
+}
+
+
+.gray{
+    border: 2px dashed #666;
+    color:#666;
+}
+.orange{
+
+    color: #f51;
+}
+.wdot{
+    border: dashed 1px gray;
+    color: #eee;
+}
+#gameScreen{
+    width: 600px;
+    height: 600px;
+    background: #336 url(../img/bg.png);
+    position: relative;
+    /*overflow: hidden;*/
+    z-index: 1;
+}
+
+#laser{
+    position: absolute;
+    width: 15px;
+    height: 600px;
+    background: transparent;
+    border: 2px #fff solid;
+    border-bottom: none;
+    left: 35px;
+    top: -560px;
+    display: none;
+}
+#hitCount{
+    color: #336;
+}
+.btn-style{
+    padding: 5px;
+    position: absolute;
+    font-weight: normal;
+    border:3px solid white;
+    color:white;
+    z-index: 1000;
+}
+.btn-style:hover{
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 0 15px 5px white;
+}
+.btn-style::selection {
+    background: none;
+}
+.btn-style::-moz-selection {
+    background: none;
+}
+
+.keySet{
+    text-align:left;
+    width: 70%;
+    border:2px solid transparent;
+}
+.keySet:hover{
+    cursor: default;
+    border-color: #fff;
+}
+.keySet::selection {
+    background: none;
+}
+.keySet::-moz-selection {
+    background: none;
+}
+.layout{
+    width: 600px;
+    height: 600px;
+    color: #ffffff;
+    position: absolute;
+    z-index: 100;
+}
+.layout1{
+    display: block;
+}
+.layout2{
+    display: none;
+}
+.selectDiff{
+    padding: 5px;
+    border:solid 2px transparent;
+}
+.selectDiff:hover{
+    cursor: pointer;
+    text-shadow: 0px 0px 3px #fff;
+}
+.layout3{
+    display: none;
+    width: 550px;
+    top: 10px;
+    left: 30px;
+
+}
+.howToPlay{
+    margin-top: 20px;
+}
+.currDifficult {
+    position: absolute;
+    top: 150px;
+    left: 220px;
+}
+#startBtn2{
+    top: 180px;
+    left: 220px;
+}
+#gameConfig{
+    top: 250px;
+    left: 220px;
+}
+#readme{top: 320px;
+    left:220px;
+}
+.returnMain {
+    top: 500px;
+    left: 450px;
+}
+#control{
+    position: absolute;
+    left: 50px;
+    top: 300px;
+    z-index: 1000;
+}
+
+/***************游戏物体样式******************/
+#p_ship{
+    width:90px;
+    height: 90px;
+    background: url(../img/lingmeng1.png) 0px 0px no-repeat;
+    position: absolute;
+    top: 300px;
+    left: 250px;
+    z-index: 10;
+}
+#p_spot{
+    margin: 37px 37px;
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    border: dotted 1px gray;
+    border-radius: 50%;
+    z-index: 100;
+    display:block;
+}
+#p_spot:after{
+    content: " ";
+    display: block;
+    width: 60px;
+    height: 60px;
+    border: dashed gray;border-radius: 50%;
+    position: relative;
+    top: -30px;
+    left: -28px;
+}
+
+.enemy1{
+    width: 60px;
+    height: 60px;
+    background: pink;
+    position: absolute;
+}
+
+.left{
+    background: url(../img/enemy1.png) no-repeat;
+}
+
+.right{
+    background: url(../img/enemy1.png) -60px 0px no-repeat;
+}
+
+.enemy2{
+    width: 60px;
+    height: 60px;
+    background: url(../img/enemy2.png) no-repeat;
+    position: absolute;
+}
+
+#theBoss{
+    width: 185px;
+    height: 208px;
+    background: url(../img/boss1.png) no-repeat;
+    position: absolute;
+    top: 85px;
+    z-index:5;
+
+}
+
+.damagedBoss{
+    background: url(../img/boss1dmg.png) no-repeat !important;
+}
+#bossHealthBar{
+    width: 200px;
+    height: 10px;
+    position: absolute;
+    top: 0;
+    left: -10px;
+    background: rgb(0,255,0);
+    display: block;
+}
+
+.bullet,.poolBlt{
+    width: 10px;
+    height: 10px;
+    background:red;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 100;
+}
