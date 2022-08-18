@@ -80,13 +80,7 @@ $(function () {
 		}
 	}
 
-	/*难易度显示逻辑*/
-	$('.currDiff').text($('#difficult').val());
-	$('.selectDiff').each(function () {
-		if($(this).text()==$('#difficult').val()){
-			$(this).css({ borderColor:"#fff" });
-		}
-	})
+	
 
 
 
@@ -171,14 +165,14 @@ function gameProccess(){
     clearInterval(timer.enemyCreator);
 	timer.overflowOperator = timer.enemyCreator = null;
 
-	// /*用完记得删哈*/
+	// /*用完记得删*/
 	// gameSt.operator = setInterval(function () {
 	// 	ammoOperating();
 	// 	showDmkcount()
 	// },200)
 
 
-    //回收子弹和横向敌人
+    //回收子弹和横向释放敌人
     if(gameSt.playing) {
 		createEnemy();
 		timer.overflowOperator = setInterval(function () {
@@ -223,9 +217,9 @@ function endGame(){
     gameSt.playing = gameSt.boss = false;
 
 	clearTimeout(timer.openFire);
-	alert("你的生命值被耗尽，游戏结束");
+	alert("你受伤过多，游戏结束");
 	
-	alert("最终得分："+gameSt.score);
+	alert("最终治退得分："+gameSt.score);
 
 	keySt.toUp = keySt.toDown = keySt.toLeft = keySt.toRight = keySt.toLSpeed = keySt.toFire =  false;
 
