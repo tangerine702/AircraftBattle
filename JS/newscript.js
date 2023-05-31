@@ -248,7 +248,7 @@ function endGame(){
 
 //重置数据
 function resetData(hp,score,graze){
-	gameSt.hp = hp || 50;
+	gameSt.hp = hp || 100;
 	gameSt.score = score || 0;
 	gameSt.graze = graze || 0;
 	$('#hitCount').html(gameSt.hp);
