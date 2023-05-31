@@ -26,7 +26,7 @@ var gameSt = {
 			stop: true, 
 			paused : false,
 			graze : 0,//擦弹
-			hp : 100,
+			hp : 50,
 			enegy : 0,
 			score : 0,
 			diff : 2 //难易度
@@ -248,7 +248,7 @@ function endGame(){
 
 //重置数据
 function resetData(hp,score,graze){
-	gameSt.hp = hp || 100;
+	gameSt.hp = hp || 50;
 	gameSt.score = score || 0;
 	gameSt.graze = graze || 0;
 	$('#hitCount').html(gameSt.hp);
