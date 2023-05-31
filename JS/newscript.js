@@ -26,7 +26,7 @@ var gameSt = {
 			stop: true, 
 			paused : false,
 			graze : 0,//擦弹
-			hp : 50,
+			hp : 100,
 			enegy : 0,
 			score : 0,
 			diff : 2 //难易度
