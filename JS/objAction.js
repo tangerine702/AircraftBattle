@@ -79,7 +79,7 @@ function fireUp(){
 		var ex = $('#theBoss')[0].offsetLeft+30,ey =$('#theBoss')[0].offsetTop,totalHealth=(150+100*gameSt.diff);
 		var timeExplode = 3,coordExplode = [[ex+120,ey+60],[ex,ey+30],[ex+60,ey+60],[ex+70,ey+170]];
 		if(ex+155>px && ex-30<px && ey<py){
-			boss.health -=1;
+			boss.health -=10;
 			$('#bossHealthBar').css({
 				width: (200*boss.health)/totalHealth+"px",
 				backgroundColor: "rgb("+(256-parseInt(256*(boss.health)/totalHealth))+","+parseInt(256*(boss.health)/totalHealth)+",0)"
@@ -137,7 +137,7 @@ function fireUp(){
 			}
 			if( Math.pow((x-bltX),2)+Math.pow((y-bltY),2)<150 ){
 				
-					gameSt.hp-=10;
+					gameSt.hp-=1;
 				
 				explode(1,bltX,bltY);
 				recycleBullet(this);
@@ -160,7 +160,7 @@ function fireUp(){
 		//
         //     if( Math.pow((x-bltX),2)+Math.pow((y-bltY),2)<150 ){
         //         if(!$('#infinite')[0].checked){
-        //             gameSt.hp-=1;
+        //             gameSt.hp-=10;
         //         }
         //         explode(1,bltX,bltY);
         //         recycleBullet($('.bullet')[i]);
