@@ -160,7 +160,7 @@ function fireUp(){
 		//
         //     if( Math.pow((x-bltX),2)+Math.pow((y-bltY),2)<150 ){
         //         if(!$('#infinite')[0].checked){
-        //             gameSt.hp-=10;
+        //             gameSt.hp-=1;
         //         }
         //         explode(1,bltX,bltY);
         //         recycleBullet($('.bullet')[i]);
