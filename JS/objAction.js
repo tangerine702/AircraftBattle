@@ -137,13 +137,13 @@ function fireUp(){
 			}
 			if( Math.pow((x-bltX),2)+Math.pow((y-bltY),2)<150 ){
 				
-					gameSt.hp-=1;
+					gameSt.hp-=10;
 				
 				explode(1,bltX,bltY);
 				recycleBullet(this);
 				$('#hitCount').text(gameSt.hp);
 				if(gameSt.hp<=0)
-					endGame();
+					//endGame();
 			}
 		});
         // var len = $('.bullet').length;
